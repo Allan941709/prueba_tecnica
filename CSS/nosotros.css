@@ -1,0 +1,34 @@
+
+/* NOSOTROS */
+.nosotros {
+   display: grid;
+   grid-row: repeat(1, 1fr);
+}
+
+
+.bloque__imagen {
+   width: 100%;
+   
+}
+
+.bloque__titulo{
+   margin: 0;
+}
+
+.nosotros__imagen {
+   grid-row: 1 / 2;
+}
+
+
+/* MEDIAS QUERIES */
+@media screen and (min-width: 1200px) {
+   
+   .nosotros{
+       grid-template-columns: repeat(2, 1fr);
+       column-gap: 2rem;
+   }
+   .nosotros__imagen{
+       grid-column: 2 / 3;
+   }
+   
+}
