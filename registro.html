@@ -8,72 +8,115 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preload-" href="css/style.css" as="style"> 
+    <link rel="preload" href="css/style.css" as="style"> 
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
     <header>
-        <h1 class="titulo">Nuestro Planeta <span>Verde</span></h1>
+        <h1 class="titulo">Planeta <span>Verde</span></h1>
     </header>
 
-<div class="nav_back">
-    <nav class="navegacion_principal contenedor">
-        <a href="index.html">Inicio</a>
-        <a href="nosotros .html">Nosotros</a>
-        <a href="galeria.html">Galeria</a>
-        <a href="registro.html">Registro</a>
-    </nav>
-</div>
+    <div class="nav_back">
+        <nav class="navegacion_principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="registro.html">Registro</a>
+        </nav>
+    </div>
 
-<!-- Registro -->
-<main class="contenedor">
-    <section>
-    <h2>Registro</h2>
-    <form action="" class="formulario">
-        <fieldset>
-                <legend>Sigue los pasos</legend>
-            <div class="contenedor-campos">
-                <div class="campo">
-                    <label>Nombre:</label>
-                    <input class="input-text" type="text" placeholder="Nombre">
-                </div> 
-                
-                <div class="campo">
-                    <label >Apellido:</label>
-                    <input class="input-text" type="text" placeholder="apellido">
-                </div>
-                
-                <div class="campo">
-                    <label>Correo:</label>
-                    <input class="input-text" type="email" placeholder="example@example.com">
-                </div>
-            
-                <div class="campo">
-                    <label>Confirma tu Correo:</label>
-                    <input class="input-text" type="email" placeholder="example@example.com">
-                </div>             
-                <div class="campo">
-                    <label for="">Aceptar Politica de Privacidad</label>
-                    <input type="checkbox" name="" id="">
-                </div>      
-            
-                <div class="campo-enviar">
-                    <input class="boton" type="submit" value="Enviar">
-                </div>
-            
-                
-        </fieldset>
-    </form>
-    </section>
-</main>
+    <main class="contenedor">
+        <section>
+            <h2>Iniciar Sesión</h2>
+            <form id="formularioInicio" class="formulario formulario-inicio">
+                <fieldset>
+                    <legend>Ingresa tus datos</legend>
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <label>Usuario:</label>
+                            <input class="input-text" type="text" id="usuarioLogin" placeholder="Usuario" required>
+                        </div> 
+                        
+                        <div class="campo">
+                            <label>Contraseña:</label>
+                            <div class="password-container">
+                                <input class="input-text" type="password" id="passwordLogin" placeholder="Contraseña" required>
+                                <i class="toggle-password fas fa-eye" onclick="togglePassword('passwordLogin')"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="campo-enviar">
+                            <input class="boton boton-ancho-completo" type="submit" value="Iniciar Sesión">
+                            <button type="button" class="boton boton-ancho-completo" onclick="nuevoRegistro()">Registrarse</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
 
-
+    <!--Registro -->
+    <div id="popupRegistro" class="popup">
+        <div class="popup-contenido">
+            <span class="cerrar-popup" onclick="cerrarPopup()">&times;</span>
+            <h2>Registro</h2>
+            <form id="formularioRegistro" class="formulario">
+                <fieldset>
+                    <legend>Sigue los pasos</legend>
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <label>Nombre:</label>
+                            <input class="input-text" type="text" id="nombreRegistro" placeholder="Nombre" required>
+                        </div> 
+                        
+                        <div class="campo">
+                            <label>Apellido:</label>
+                            <input class="input-text" type="text" id="apellidoRegistro" placeholder="Apellido" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label>Correo:</label>
+                            <input class="input-text" type="email" id="correoRegistro" placeholder="example@example.com" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label>Confirma tu Correo:</label>
+                            <input class="input-text" type="email" id="confirmarCorreoRegistro" placeholder="example@example.com" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label>Usuario:</label>
+                            <input class="input-text" type="text" id="usuarioRegistro" placeholder="Usuario" required>
+                        </div>
+                        
+                        <div class="campo">
+                            <label>Contraseña:</label>
+                            <div class="password-container">
+                                <input class="input-text" type="password" id="passwordRegistro" placeholder="Contraseña" required>
+                                <i class="toggle-password fas fa-eye" onclick="togglePassword('passwordRegistro')"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="politicaRegistro">Aceptar Política de Privacidad</label>
+                            <input type="checkbox" id="politicaRegistro" required>
+                        </div>      
+                        
+                        <div class="campo-enviar">
+                            <input class="boton" type="submit" value="Registrarse">
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 <footer>
-    <p>Todos los derecho resevados. Nuestro Planeta Verde</p>
+    <p>Todos los derechos reservados. Planeta Verde</p>
 </footer>
 
-
-
+<script src="JavaScript/funciones.js"></script>
 </body>
 </html>

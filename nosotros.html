@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantas || Mejor Planeta</title>
-    <meta name="description" content="Creada para mejorar nuestro Planeta,Creada individual con plazos diferentes y lenguaje de programacion.">
+    <title>Nosotros</title>
     <link rel="stylesheet" href="CSS/normalize.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preload-" href="css/style.css" as="style"> 
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/nosotros.css">
 </head>
 
 <body>
@@ -27,24 +27,22 @@
     </nav>
 </div>
 
-<section class="hero">  
-    <div class="contenido_hero">
-        <h2>Nuestra Ubicación</h2>
-        <div class="ubicacion">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-trees"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 5l3 3l-2 1l4 4l-3 1l4 4h-9" /><path d="M15 21l0 -3" /><path d="M8 13l-2 -2" /><path d="M8 12l2 -2" /><path d="M8 21v-13" /><path d="M5.824 16a3 3 0 0 1 -2.743 -3.69a3 3 0 0 1 .304 -4.833a3 3 0 0 1 4.615 -3.707a3 3 0 0 1 4.614 3.707a3 3 0 0 1 .305 4.833a3 3 0 0 1 -2.919 3.695h-4z" /></svg>
-            <p>Bilbao, España</p>
+<!-- Main content -->
+<main class="contenedor">.
+    <h2>Sobre Nosotros</h2>
+    <div class="nosotros">
+        <div class="nosotros__contenido">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque consectetur quam purus, rutrum ullamcorper purus elementum non. Ut semper ut diam at efficitur. Etiam eget orci nibh. Cras fermentum, libero sed ultrices mollis, diam mi iaculis nisi, a congue ligula ligula nec sapien. Morbi sollicitudin varius commodo. Integer dictum urna libero, in malesuada dui consectetur ac.</p>
+            <p>Fusce scelerisque facilisis arcu quis posuere. Ut volutpat, turpis sit amet venenatis dapibus, ipsum libero aliquet est, eget venenatis urna enim tincidunt lacus. Sed sodales dolor fringilla lorem tristique ultrices. Quisque sodales, lorem sed eleifend elementum, lorem lacus hendrerit velit, sed vulputate nunc purus et augue. </p>
+        
         </div>
-        
-        <!-- Fecha-->
-        <div class="fecha" id="fecha"></div>
-        
-        <a class="boton" href="registro.html">Registro</a>
-    </div>      
-</section>
+        <img class="nosotros__imagen" src="img/nosotros.jpg" alt="Sobre Nosotros">
+    </div>
+</main>
 
-<!-- Quienes Somos -->
-<main class="contenedor sombra">        
-        <h2>Lo que Hacemos</h2>
+<section class="contenedor__comprar">
+    
+    <h2>Lo que Hacemos</h2>
     <div class="servicios">
         <section class="servicio">
             <h3>Reciclaje</h3>
@@ -62,7 +60,7 @@
         </div>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore at impedit optio recusandae totam inventore provident ratione unde sint temporibus.</p>
         </section>
-
+        
         <section class="servicio">
             <h3>Nuestra Fundacion</h3>
         <div class="icono">
@@ -71,52 +69,10 @@
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore at impedit optio recusandae totam inventore provident ratione unde sint temporibus.</p>
         </section>
     </div>
-
-
-<!-- Contacto -->
-<section>
-    <h2>Contacto</h2>
-    <form id="formularioContacto" class="formulario">
-        <fieldset>
-            <legend>Contáctenos Llenando todos los Campos</legend>
-            <div class="contenedor-campos">
-                <div class="campo">
-                    <label for="nombre">Nombre:</label>
-                    <input class="input-text" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                </div> 
-                
-                <div class="campo">
-                    <label for="telefono">Teléfono:</label>
-                    <input class="input-text" type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
-                </div>
-                
-                <div class="campo">
-                    <label for="correo">Correo:</label>
-                    <input class="input-text" type="email" id="correo" name="correo" placeholder="Correo" required>
-                </div>
-                
-                <div class="campo">
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea class="input-text" id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
-                </div>
-                
-                <div class="campo">
-                    <label for="politica">Aceptar Política de Privacidad</label>
-                    <input type="checkbox" id="politica" name="politica" required>
-                </div>
-                
-                <div class="campo-enviar">
-                    <input class="boton" type="submit" value="Enviar">
-                </div>
-            </div>
-        </fieldset>
-    </form>
 </section>
-</main>
-    <footer>
-        <p>Todos los derecho resevados. Planeta Verde</p>
-    </footer>    
-    
-    <script src="JavaScript/funciones.js"></script>    
+
+<footer>
+    <p>Todos los derecho resevados. Planeta Verde</p>
+</footer>
 </body>
 </html>
